@@ -1,7 +1,17 @@
 .home-container {
-    text-align: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   }
   
+  .search-bar-container {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .property-list-container {
+    flex: 2;
+    padding: 20px;
+  }
   /* Add more styles as needed */
   

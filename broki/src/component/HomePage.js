@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/HomePage.css'; // Import the CSS file for styling
 import PropertyCard from './PropertyCard';
+import SearchBar from './SearchBar';
 
 const HomePage = () => {
 
@@ -22,11 +23,16 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-      <h2>Property Listings</h2>
-      <div className="property-list">
-        {propertyListings.map((property, index) => (
-          <PropertyCard key={index} property={property} />
-        ))}
+        <div className="search-bar-container">
+        <SearchBar />
+      </div>
+      <div className="property-list-container">
+        <h2>Property Listings</h2>
+        <div className="property-list">
+          {propertyListings.map((property, index) => (
+            <PropertyCard key={index} property={property} />
+          ))}
+        </div>
       </div>
     </div>
   );
