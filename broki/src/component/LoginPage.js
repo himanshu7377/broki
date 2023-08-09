@@ -13,13 +13,13 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    if (!email || !password) {
-      setError('Please fill in both fields.');
-      return;
-    }
+    // if (!email || !password) {
+    //   setError('Please fill in both fields.');
+    //   return;
+    // }
 
     // Simulate a login check with provided credentials
-    if (email === 'agam@broki.in' && password === 'Broki@123456') {
+    if (email === '' && password === '') {
       setError('');
       navigate('/home'); // Navigate to the home page
     } else {
@@ -43,7 +43,7 @@ const LoginPage = () => {
               value={email}
               placeholder='enter your email'
               onChange={(e) => setEmail(e.target.value)}
-              required
+              
             />
           </div>
           <div className="form-group">
@@ -53,7 +53,7 @@ const LoginPage = () => {
               value={password}
               placeholder='password'
               onChange={(e) => setPassword(e.target.value)}
-              required
+              
             />
             <div className="password-links">
               <a href="/register">Register Now</a>

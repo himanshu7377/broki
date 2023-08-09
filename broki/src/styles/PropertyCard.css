@@ -1,32 +1,63 @@
 .property-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-  }
-  
-  .property-image {
-    flex: 1;
-    overflow: hidden;
-  }
-  
-  .property-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .property-details {
-    padding: 10px;
-  }
-  
-  .property-area,
-  .property-sales,
-  .property-rent {
-    margin: 5px 0;
-  }
-  
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.property-image {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.property-lower {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 1; /* Allow the details section to expand to fill available space */
+  padding: 10px;
+}
+
+.property-details {
+  margin-bottom: 10px;
+}
+
+.property-area {
+  font-weight: bold;
+}
+
+.property-sales,
+.property-rent {
+  color: #555;
+}
+
+.property-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensure buttons stay within property card */
+  padding-top: 10px; /* Add padding for space above the buttons */
+}
+
+.property-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 10px; /* Add margin between the buttons */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Adjust other styles as needed */
