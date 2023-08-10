@@ -27,7 +27,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  flex-grow: 3;  /*Allow the details section to expand to fill available space*/
+  flex-grow: 3;  
   padding: 10px;
 }
 
@@ -55,7 +55,7 @@
   color: #fff;
   border: none;
   padding: 5px 10px;
-  margin-right: 30px; /* Add margin between the buttons */
+  margin-right: 30px; 
   border-radius: 4px;
   cursor: pointer;
 }
@@ -66,10 +66,10 @@
 
 .property-stats {
   display: grid;
-  grid-template-columns: auto auto auto; /* Create three columns */
+  grid-template-columns: auto auto auto; 
   font-size: 14px;
   color: #555;
-  gap: 10px; /* Add spacing between columns */
+  gap: 10px; 
 }
 
 .property-stat-label {
@@ -77,12 +77,10 @@
 }
 
 .property-stat-value {
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap; 
 }
 
-.property-details {
-  margin-bottom: 10px;
-}
+
 
 .property-name-location {
   display: flex;
@@ -98,4 +96,4 @@
 .property-location {
   color: #555;
 }
-/* Adjust other styles as needed */
+

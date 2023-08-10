@@ -12,7 +12,7 @@ const HomePage = () => {
   const [filteredPropertyListings, setFilteredPropertyListings] = useState([]);
   const backgroundImageUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhQgVGgOlJLm8YZ6bZ77End0MB3QKVTAWsQQ&usqp=CAU';
   const propertyListings = [
-    // Your property listings data here
+    
 
   
       { name:'krishna Paradise',
@@ -37,7 +37,7 @@ const HomePage = () => {
         monthlySales: 3000000,
         monthlyRent: 180000,
       },
-      // Add more property listings
+     
     
   ];
 

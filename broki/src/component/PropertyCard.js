@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/PropertyCard.css'; // Import the CSS file for styling
+import '../styles/PropertyCard.css'; 
 
 const PropertyCard = ({ property }) => {
   const {name,Location, imageUrl, area, monthlySales, monthlyRent } = property;

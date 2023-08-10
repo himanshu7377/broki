@@ -8,12 +8,12 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const navigate = useNavigate(); // Create a navigate function
+  const navigate = useNavigate(); 
 
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Simulate a login check with provided credentials
+    //  login check with provided credentials
     if (email === '' && password === '') {
       setError('');
       navigate('/home'); // Navigate to the home page
