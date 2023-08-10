@@ -1,28 +1,20 @@
 import React, { useState } from 'react';
-
+import '../styles/SearchBar.css';
 
 const SearchBar = ({ propertyListings, setFilteredPropertyListings }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
- 
-
   const handleSearch = () => {
-
     if (searchTerm.trim() === '') {
-      setFilteredPropertyListings(propertyListings); // Show all listings when search term is empty
+      setFilteredPropertyListings(propertyListings);
       return;
     }
-    
-   
-      const filteredListings = propertyListings.filter(property => {
-        return property.name.toLowerCase().includes(searchTerm.toLowerCase());
-      });
-    
-      setFilteredPropertyListings(filteredListings);
 
-    
+    const filteredListings = propertyListings.filter(property => {
+      return property.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
 
-    
+    setFilteredPropertyListings(filteredListings);
   };
 
   return (
@@ -32,10 +24,11 @@ const SearchBar = ({ propertyListings, setFilteredPropertyListings }) => {
           type="text"
           placeholder="Search by Property Name"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={e => setSearchTerm(e.target.value)}
         />
-        <button onClick={handleSearch}>Search</button>
-        
+        <button className="search-bar-button" onClick={handleSearch}>
+          Search
+        </button>
       </div>
     </div>
   );
