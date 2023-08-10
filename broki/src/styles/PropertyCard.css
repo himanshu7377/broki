@@ -26,7 +26,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  flex-grow: 1; /* Allow the details section to expand to fill available space */
+  flex-grow: 3;  /*Allow the details section to expand to fill available space*/
   padding: 10px;
 }
 
@@ -34,13 +34,12 @@
   margin-bottom: 10px;
 }
 
-.property-area {
-  font-weight: bold;
-}
+
 
 .property-sales,
-.property-rent {
+.property-rent,.property-area {
   color: #555;
+  font-weight: bold;
 }
 
 .property-buttons {
@@ -55,7 +54,7 @@
   color: #fff;
   border: none;
   padding: 5px 10px;
-  margin-right: 10px; /* Add margin between the buttons */
+  margin-right: 30px; /* Add margin between the buttons */
   border-radius: 4px;
   cursor: pointer;
 }
