@@ -1,0 +1,22 @@
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .search-input-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  input[type="text"] {
+    padding-right: 40px; /* Add padding to accommodate the button */
+  }
+  
+  button {
+    position: absolute;
+    right: 0;
+  }
+  

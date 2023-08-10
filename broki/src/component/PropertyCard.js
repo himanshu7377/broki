@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/PropertyCard.css'; // Import the CSS file for styling
 
 const PropertyCard = ({ property }) => {
-  const { imageUrl, area, monthlySales, monthlyRent } = property;
+  const {Name,Location, imageUrl, area, monthlySales, monthlyRent } = property;
 
   const imageStyle = {
     maxWidth: '100%',
@@ -17,9 +17,24 @@ const PropertyCard = ({ property }) => {
       </div>
       <div className="property-lower">
         <div className="property-details">
-          <p className="property-area">Area: {area} sq. ft.</p>
-          <p className="property-sales">Monthly Sales: ${monthlySales}</p>
-          <p className="property-rent">Monthly Rent: ${monthlyRent}</p>
+        <div className="property-name-location">
+    <p className="property-name">{Name}</p>
+    <p className="property-location">{Location}</p>
+  </div>
+          <div className="property-stats">
+            <div className="property-stats-row">
+              <span className="property-stat-label">Monthly Sales:</span><br/>
+              <span className="property-stat-value">{monthlySales} Rs</span>
+            </div>
+            <div className="property-stats-row">
+              <span className="property-stat-label">Monthly Rent:</span><br/>
+              <span className="property-stat-value">{monthlyRent} Rs</span>
+            </div>
+            <div className="property-stats-row">
+              <span className="property-stat-label">Area:</span><br/>
+              <span className="property-stat-value">{area} sq. ft.</span>
+            </div>
+          </div>
         </div>
         <div className="property-buttons">
           <button className="property-button">Talk To Us</button>
