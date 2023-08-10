@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/PropertyCard.css'; // Import the CSS file for styling
 
 const PropertyCard = ({ property }) => {
-  const {Name,Location, imageUrl, area, monthlySales, monthlyRent } = property;
+  const {name,Location, imageUrl, area, monthlySales, monthlyRent } = property;
 
   const imageStyle = {
     maxWidth: '100%',
@@ -18,7 +18,7 @@ const PropertyCard = ({ property }) => {
       <div className="property-lower">
         <div className="property-details">
         <div className="property-name-location">
-    <p className="property-name">{Name}</p>
+    <p className="property-name">{name}</p>
     <p className="property-location">{Location}</p>
   </div>
           <div className="property-stats">

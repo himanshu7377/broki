@@ -15,7 +15,7 @@ const HomePage = () => {
     // Your property listings data here
 
   
-      { Name:'krishna Paradise',
+      { name:'krishna Paradise',
         Location:'whitefield',
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwRRWRHpf9lhSpgTWUvk9b-nNW3KErVjxTcg&usqp=CAU',
         area: 1500,
@@ -23,14 +23,14 @@ const HomePage = () => {
         monthlyRent: 120000,
       },
       {
-        Name:'SLV Paradise',
+        name:'SLV Paradise',
         Location:'uddupi',
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQMI4PTpFaAnjp0U-k0FckopMLJMRaMVBjVw&usqp=CAU',
         area: 1800,
         monthlySales: 2500000,
         monthlyRent: 150000,
       },
-      {Name:'makkhan Paradise',
+      {name:'makkhan Paradise',
       Location:'punjab',
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4RyjnJ2sSfEDV7AuHqMh_ar-j-Ibs3HyUQw&usqp=CAU',
         area: 1900,

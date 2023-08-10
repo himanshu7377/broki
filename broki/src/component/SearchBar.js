@@ -2,22 +2,27 @@ import React, { useState } from 'react';
 
 
 const SearchBar = ({ propertyListings, setFilteredPropertyListings }) => {
-  const [locationFilter, setLocationFilter] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const handleLocationChange = (e) => {
-    const newLocation = e.target.value;
-    setLocationFilter(newLocation);
-  };
+ 
 
   const handleSearch = () => {
-    const filteredListings = propertyListings.filter(property => {
-      if (property.location) {
-        return property.location.toLowerCase().includes(locationFilter.toLowerCase());
-      }
-      return false;
-    });
 
-    setFilteredPropertyListings(filteredListings);
+    if (searchTerm.trim() === '') {
+      setFilteredPropertyListings(propertyListings); // Show all listings when search term is empty
+      return;
+    }
+    
+   
+      const filteredListings = propertyListings.filter(property => {
+        return property.name.toLowerCase().includes(searchTerm.toLowerCase());
+      });
+    
+      setFilteredPropertyListings(filteredListings);
+
+    
+
+    
   };
 
   return (
@@ -25,10 +30,11 @@ const SearchBar = ({ propertyListings, setFilteredPropertyListings }) => {
       <div className="search-input-container">
         <input
           type="text"
-          placeholder="Search by location"
-          value={locationFilter}
-          onChange={handleLocationChange}
+          placeholder="Search by Property Name"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <button onClick={handleSearch}>Search</button>
         
       </div>
     </div>

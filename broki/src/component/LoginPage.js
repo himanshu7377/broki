@@ -13,11 +13,6 @@ const LoginPage = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // if (!email || !password) {
-    //   setError('Please fill in both fields.');
-    //   return;
-    // }
-
     // Simulate a login check with provided credentials
     if (email === '' && password === '') {
       setError('');
@@ -41,9 +36,8 @@ const LoginPage = () => {
             <input
               type="email"
               value={email}
-              placeholder='enter your email'
+              placeholder="enter your email"
               onChange={(e) => setEmail(e.target.value)}
-              
             />
           </div>
           <div className="form-group">
@@ -51,18 +45,17 @@ const LoginPage = () => {
             <input
               type="password"
               value={password}
-              placeholder='password'
+              placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
-              
             />
             <div className="password-links">
               <a href="/register">Register Now</a>
               <a href="/forgot-password">Forgot Password</a>
             </div>
+            <button type="submit" className="btn btn-primary">
+              Log In
+            </button>
           </div>
-          <button type="submit" className="btn btn-primary">
-            Log In
-          </button>
         </form>
       </div>
     </div>
