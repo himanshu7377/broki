@@ -26,7 +26,7 @@ const LoginPage = () => {
     <div className="login-container">
       <div className="login-card">
         <img src={msgIcon} alt="Message Icon" className="msg-icon" />
-        <h2>Login</h2>
+        <h2>Broki</h2>
         <p>GET STARTED</p>
         <p>Fill the form to log in</p>
         {error && <p className="error-message">{error}</p>}

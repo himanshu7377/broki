@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/PropertyCard.css'; 
 
 const PropertyCard = ({ property }) => {
-  const {name,Location, imageUrl, area, monthlySales, monthlyRent } = property;
+  const { name, Location, imageUrl, area, monthlySales, monthlyRent } = property;
+  const [isTalkToUsActive, setIsTalkToUsActive] = useState(false);
 
   const imageStyle = {
     maxWidth: '100%',
     maxHeight: '100%',
     objectFit: 'cover',
+  };
+
+  const handleTalkToUsToggle = () => {
+    setIsTalkToUsActive(!isTalkToUsActive);
   };
 
   return (
@@ -17,10 +22,10 @@ const PropertyCard = ({ property }) => {
       </div>
       <div className="property-lower">
         <div className="property-details">
-        <div className="property-name-location">
-    <p className="property-name">{name}</p>
-    <p className="property-location">{Location}</p>
-  </div>
+          <div className="property-name-location">
+            <p className="property-name">{name}</p>
+            <p className="property-location">{Location}</p>
+          </div>
           <div className="property-stats">
             <div className="property-stats-row">
               <span className="property-stat-label">Monthly Sales:</span><br/>
@@ -37,7 +42,15 @@ const PropertyCard = ({ property }) => {
           </div>
         </div>
         <div className="property-buttons">
-          <button className="property-button">Talk To Us</button>
+          <label className="toggle-switch">
+            <input
+              type="checkbox"
+              checked={isTalkToUsActive}
+              onChange={handleTalkToUsToggle}
+              placeholder='Talk to us'
+            />
+            <span className="slider"></span>
+          </label>
           <button className="property-button">Share</button>
         </div>
       </div>

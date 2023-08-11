@@ -46,8 +46,11 @@
 .property-buttons {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* Ensure buttons stay within property card */
-  padding-top: 10px; /* Add padding for space above the buttons */
+  width: 100%; 
+  padding-top: 10px; 
+  margin-left: 10px;
+  
+ 
 }
 
 .property-button {
@@ -55,9 +58,12 @@
   color: #fff;
   border: none;
   padding: 5px 10px;
-  margin-right: 30px; 
-  border-radius: 4px;
+  margin-right: 25px; 
+  border-radius: 20px;
   cursor: pointer;
+  height: 29px;
+  
+
 }
 
 
@@ -95,5 +101,58 @@
 
 .property-location {
   color: #555;
+}
+
+
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 150px;
+  height: 30px;
+  margin-right: 65px;
+}
+
+.toggle-switch input {
+  display: none;
+
+}
+
+
+.slider {
+  width: 170%;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0px;
+  right: 40px;
+  bottom: 0;
+  background-color: gray;
+  border-radius: 15px;
+  transition: 0.4s;
+  
+}
+
+.slider:before {
+  position: absolute;
+  content: "Talk To Us"; 
+  height: 25px;
+  width: 80px; 
+  left: 2px;
+  bottom: 2px;
+  background-color: rgb(15, 14, 14);
+  color: #fff;
+  border-radius: 20px;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px; 
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+  
 }
 

@@ -2,6 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1; 
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%); 
 }
 
 .search-input-container {
@@ -22,7 +29,7 @@ input {
 }
 
 .search-bar-button {
-  background-color: #007bff;
+  background-color: #4986cc;
   color: #fff;
   border: none;
   padding: 6px 10px;
@@ -30,8 +37,20 @@ input {
   cursor: pointer;
   width: 20%;
   transition: background-color 0.2s;
+
+
 }
 
 .search-bar-button:hover {
   background-color: #0056b3;
 }
+
+
+
+
+
+
+
+
+
+
