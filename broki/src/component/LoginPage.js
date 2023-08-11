@@ -14,7 +14,7 @@ const LoginPage = () => {
     e.preventDefault();
 
     //  login check with provided credentials
-    if (email === '' && password === '') {
+    if (email === 'agam@broki.in' && password === 'Broki@123456') {
       setError('');
       navigate('/home'); // Navigate to the home page
     } else {
@@ -27,7 +27,7 @@ const LoginPage = () => {
       <div className="login-card">
         <img src={msgIcon} alt="Message Icon" className="msg-icon" />
         <h2>Broki</h2>
-        <p>GET STARTED</p>
+        <p>BUY/SELL RESTAURANT UTENSILS </p>
         <p>Fill the form to log in</p>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin}>
@@ -38,6 +38,7 @@ const LoginPage = () => {
               value={email}
               placeholder="enter your email"
               onChange={(e) => setEmail(e.target.value)}
+              required
             />
           </div>
           <div className="form-group">
@@ -47,6 +48,7 @@ const LoginPage = () => {
               value={password}
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
+              required
             />
             <div className="password-links">
               <a href="/register">Register Now</a>

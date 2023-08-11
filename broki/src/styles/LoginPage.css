@@ -59,6 +59,7 @@
     height: 40px;
     margin: 0 auto;
     display: block;
+    
   }
   
   .login-card p {
@@ -70,18 +71,19 @@
   .password-links {
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 5px;
   }
   
   .password-links a {
-    color: #007bff;
+    padding: 10px;
+    color: #6200ffe4;
     text-decoration: none;
-    transition: color 0.2s;
+    
   }
   
   .password-links a:hover {
-    color: #0056b3;
+    color: #f50c0ce8;
   }
 
   
